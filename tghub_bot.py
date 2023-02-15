@@ -10,8 +10,8 @@ import openpyxl
 
 async def main():
     # Enter your own API ID and API hash here
-    api_id = 12345
-    api_hash = "your_api_hash"
+    api_id = 29650146
+    api_hash = "17434fb83ac4882cb77ad182bc741760"
     session_name = 'tghub_bot'
     client = TelegramClient(session_name, api_id, api_hash)
     try:
@@ -70,11 +70,17 @@ async def main():
                     continue
             # Add channel id and its last 5 posts to excel file
             posts_str = "<br>".join(posts)
-        wb.save('posts.xlsx')
-        print("Excel file created successfully!")
+            sheet.cell(row=row, column=1, value=channel_id)
+            sheet.cell(row=row, column=2, value=posts_str)
+        except:
+            continue
 
-        # Close the client connection
-        await client.disconnect()
+    # Save excel file
+    wb.save('posts.xlsx')
+    print("Excel file created successfully")
 
-    if __name__ == '__main__':
-        asyncio.run(main())
+    # Stop the client
+    await client.disconnect()
+
+# Run the main function
+asyncio.run(main())
