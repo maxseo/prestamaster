@@ -24,29 +24,26 @@ ws.cell(row=1, column=2, value='Latest Posts')
 
 
 # Define function to collect latest posts for a channel
-    async def collect_latest_posts(channel_id):
-        # Get the latest 5 messages from the channel
-        messages = await bot.get_messages(chat_id=channel_id, limit=5)
+async def collect_latest_posts(channel_id):
+    messages = await bot.get_history(chat_id=channel_id, limit=5)
 
-        # Format the messages as HTML
-        posts = []
+    # Write the posts to a CSV file
+    with open('posts.csv', 'a', encoding='utf-8', newline='') as file:
+        writer = csv.writer(file)
+        row = channel_ids.index(channel_id) + 2
         for message in messages:
+            text = message.text
             if message.photo:
-                post_content = f'<a href="{message.link}">&#8205;</a><a href="{message.photo[-1].file_id}">&#8205;</a>'
+                photo_url = message.photo[-1].file_id
+                text = f'<a href="https://t.me/c/{channel_id}/{message.message_id}">&#8205;</a>\n<a href="{photo_url}">📷</a>\n{text}'
             elif message.video:
-                post_content = f'<a href="{message.link}">&#8205;</a><a href="{message.video.file_id}">&#8205;</a>'
+                video_url = message.video.file_id
+                text = f'<a href="https://t.me/c/{channel_id}/{message.message_id}">&#8205;</a>\n<a href="{video_url}">🎥</a>\n{text}'
             else:
-                post_content = message.text_html
-            posts.append(f'<div class="tg-post">{post_content}</div>')
+                text = f'<a href="https://t.me/c/{channel_id}/{message.message_id}">{text}</a>'
 
-        # Return the formatted posts
-        return posts
-
-                # Write channel ID and latest post to worksheet
-                row = channel_ids.index(channel_id) + 2
-                ws.cell(row=row, column=1, value=channel_id)
-                ws.cell(row=row, column=2, value=post_html)
-                break
+            writer.writerow([row, text])
+            row += 1
 
     except aiogram.exceptions.TelegramAPIError:
         # Handle errors
