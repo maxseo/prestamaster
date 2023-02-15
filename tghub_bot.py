@@ -70,3 +70,11 @@ async def main():
                     continue
             # Add channel id and its last 5 posts to excel file
             posts_str = "<br>".join(posts)
+        wb.save('posts.xlsx')
+        print("Excel file created successfully!")
+
+        # Close the client connection
+        await client.disconnect()
+
+    if __name__ == '__main__':
+        asyncio.run(main())
