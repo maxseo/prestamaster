@@ -1,0 +1,1 @@
+<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#pmreview_tab" role="tab" aria-controls="product-details">{l s='Отзывы' mod='pmreview'}</a></li>
