@@ -1,0 +1,2030 @@
+<main>
+
+
+
+<span id="top"></span>
+<header id="header" class=" block-bg block_container">
+
+
+
+<div class="container">
+<div id="row_33" class="row">
+<div id="col_51" class="col-2 col-lg">
+
+<div id="widget_container_logo_2" data-id_widget="2" class="" data-sortable_element="second_row" data-widget_type="logo">
+<a id="widget_container_logo_2" href="http://promoelitemodels.ru/" aria-label="Elite">
+<img class="logo" src="http://promoelitemodels.ru/modules/masterium/views/img/widgets/logo//037dbca299e4f5ea6aaeb002c36b69b1.svg" alt="Elite" width="100" height="30">
+</a>
+</div>
+
+</div>                    <div id="col_52" class="col text-right">
+
+<div id="widget_container_linklist_1" data-id_widget="1" class="" data-sortable_element="second_row" data-widget_type="linklist">
+<div id="widget_container_linklist_1" class="linklist__wrapper">
+<div class="linklist__block">
+<a class="linklist__item selected" href="#block_13">
+
+<span>Сопровождение</span>                 </a>
+<a class="linklist__item" href="#block_18">
+
+<span>Наши модели</span>                 </a>
+<a class="linklist__item" href="#block_15">
+
+<span>Виды услуг</span>                 </a>
+<a class="linklist__item" href="#block_157">
+
+<span>Контакты</span>                 </a>
+</div>
+</div>
+
+
+<script>
+const linkClass = "linklist__item";
+const links = document.querySelectorAll(`.${linkClass}, .inner_btn`);
+let selectedItem = null;
+
+links.forEach((link) => {
+link.addEventListener("click", (event) => {
+event.preventDefault();
+const sectionId = link.getAttribute("href");
+const section = document.querySelector(sectionId);
+const screens = document.querySelectorAll(".screen");
+
+screens.forEach((screen) => {
+if (screen === section) {
+screen.classList.add("active", "shift");
+} else {
+screen.classList.remove("active", "shift");
+}
+});
+
+if (selectedItem !== null) {
+selectedItem.classList.remove("selected");
+}
+
+link.classList.add("selected");
+
+selectedItem = link;
+
+let startY = 0;
+if (screens.length > 0) {
+let activeScreenIndex = 0;
+screens[activeScreenIndex].classList.add("active");
+
+document.addEventListener("scroll", handleScroll);
+document.addEventListener("touchmove", handleScroll);
+}
+
+function handleScroll(event) {
+const delta = Math.sign(event.deltaY || event.touches[0].clientY - startY);
+startY = event.touches[0].clientY;
+
+if (screens.length > 0) {
+screens[activeScreenIndex].classList.remove("active");
+
+activeScreenIndex += delta;
+if (activeScreenIndex < 0) {
+activeScreenIndex = 0;
+} else if (activeScreenIndex >= screens.length) {
+activeScreenIndex = screens.length - 1;
+}
+
+screens[activeScreenIndex].classList.add("active");
+}
+}
+});
+});  
+
+</script>
+</div>
+
+</div>            </div>                        
+
+</div>
+</header>
+
+<div id="wrapper">
+
+
+<aside id="notifications">
+<div class="container">
+
+
+
+</div>
+</aside>
+
+
+
+
+
+
+
+<section id="block_13" class="screen block-bg block_container active shift">
+
+
+
+<div class="container">
+<div id="row_30" class="row">
+<div id="col_46" class="col-12 col-lg-5">
+
+<div id="widget_container_text_16" data-id_widget="16" class="" data-sortable_element="second_row" data-widget_type="text">
+<div id="widget_container_text_16" class="text">
+Элитное
+</div>
+
+</div>
+
+
+<div id="widget_container_title_9" data-id_widget="9" class="" data-sortable_element="second_row" data-widget_type="title">
+<h1 id="widget_container_title_9">
+Сопровождение&nbsp;
+</h1>
+
+</div>
+
+
+<div id="widget_container_text_17" data-id_widget="17" class="" data-sortable_element="second_row" data-widget_type="text">
+<div id="widget_container_text_17" class="text">
+Наши девушки не просто обладают потрясающей внешностью и красивыми чертами лица, но готовы поддержать разговор практически на любые темы на нескольких языках, иимеют хорошее чувство юмора и превосходно владеют правилами этикета!
+</div>
+
+</div>
+
+
+<div id="widget_container_button_1" data-id_widget="1" class=" gld inner_btn" data-sortable_element="second_row" data-widget_type="button">
+<a id="widget_container_button_1" class="btn gld inner_btn wow  animated" href="#block_18" style="visibility: visible;">
+<span>Подобрать спутницу</span>    </a>                                </div>
+
+
+<div id="widget_container_text_18" data-id_widget="18" class=" hidden-md-up" data-sortable_element="second_row" data-widget_type="text">
+<div id="widget_container_text_18" class="text hidden-md-up wow  animated" style="visibility: visible;">
+Модельное агенство <br>не предоставляет услуг <br>интимного характера!
+</div>
+
+</div>
+
+</div>                    <div id="col_47" class="col hidden-md-down">
+
+<div id="widget_container_text_19" data-id_widget="19" class="" data-sortable_element="second_row" data-widget_type="text">
+<div id="widget_container_text_19" class="text">
+В целях конфиденциальности на сайте представлены анкеты - типажи, чтобы передать красоту, женственность и элегантность наших девушек.
+</div>
+
+</div>
+
+</div>            </div>                        
+
+</div>
+</section>            <section id="block_18" class="screen block-bg block_container">
+
+
+
+<div class="container">
+<div id="row_34" class="row">
+<div id="col_53" class="col col-lg-8">
+
+<div id="widget_container_button_2" data-id_widget="2" class=" gld" data-sortable_element="second_row" data-widget_type="button">
+<a id="widget_container_button_2" class="btn gld wow  animated" href="https://telegram.im/@Vipescort555" style="visibility: visible;">
+<span>Запросить весь каталог</span>    </a>                                </div>
+
+
+<div id="widget_container_productlist_11" data-id_widget="11" class=" hidden-md-down wow NoN animated" data-sortable_element="second_row" data-wow-delay="0.3s" data-wow-offset="50" data-widget_type="productlist" style="visibility: visible; animation-delay: 0.3s;">
+<div id="widget_container_productlist_11" class="product_list row hidden-md-down">
+<div class="
+col-6
+col-sm-6
+col-md-4
+col-lg-6
+col-xl-6
+col-xxl-6
+">
+<div class="product-miniature js-product-miniature typeE1" data-id-product="77" data-id-product-attribute="0">
+<div class="product-miniature__wrapper">
+<div class="thumbnail-container list-view reviews-loading">
+
+<div class="thumbnail-container__img">
+
+<img src="http://promoelitemodels.ru/556-home_default/letisiya.jpg" alt="Леонора" data-full-size-image-url="http://promoelitemodels.ru/556-large_default/letisiya.jpg" width="360" height="480" loading="lazy">
+
+<div class="quick-view">
+<a class="quick-view_btn" href="#" data-link-action="quickview"> </a>
+</div>
+</div>
+
+<div class="product-info">
+<div class="product-info__row">
+
+<h3 class="product-info__title "><a href="http://promoelitemodels.ru/modeli/77-letisiya.html">Леонора</a></h3>
+
+
+<div class="product-info__rating">
+
+<div class="product-minireviews">
+<div class="product-minireviews__icons ">
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="product-info__row">
+
+<div class="product-info__features">
+
+<ul class="pdm-wrapper2">
+<li class="pdm2">
+<span class="pdm_caption">Возраст:</span>
+<span class="pdm_value">25</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Рост:</span>
+<span class="pdm_value">170</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Телосложение:</span>
+<span class="pdm_value">Худая</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Цвет волос:</span>
+<span class="pdm_value">Брюнетка</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Владеет:</span>
+<span class="pdm_value">Английским</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Предпочитает:</span>
+<span class="pdm_value">Рестораны</span>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+
+
+<div class="product-info__row mt-auto">
+
+
+<div class="product-info__price">
+
+<span class="sr-only">Цена</span>
+<span itemprop="price" class="price ">48&nbsp;000&nbsp;₽</span>
+
+
+</div>
+
+
+<a class="inv-btn" href="https://telegram.im/@Vipescort555">Пригласи ее <i class="lni lni-telegram-original"></i></a>
+</div>    
+</div>
+
+
+</div> 
+</div>
+</div>
+</div>
+<div class="
+col-6
+col-sm-6
+col-md-4
+col-lg-6
+col-xl-6
+col-xxl-6
+">
+<div class="product-miniature js-product-miniature typeE1" data-id-product="73" data-id-product-attribute="0">
+<div class="product-miniature__wrapper">
+<div class="thumbnail-container list-view reviews-loading">
+
+<div class="thumbnail-container__img">
+
+<img src="http://promoelitemodels.ru/532-home_default/letisiya.jpg" alt="Женя" data-full-size-image-url="http://promoelitemodels.ru/532-large_default/letisiya.jpg" width="360" height="480" loading="lazy">
+
+<div class="quick-view">
+<a class="quick-view_btn" href="#" data-link-action="quickview"> </a>
+</div>
+</div>
+
+<div class="product-info">
+<div class="product-info__row">
+
+<h3 class="product-info__title "><a href="http://promoelitemodels.ru/modeli/73-letisiya.html">Женя</a></h3>
+
+
+<div class="product-info__rating">
+
+<div class="product-minireviews">
+<div class="product-minireviews__icons ">
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="product-info__row">
+
+<div class="product-info__features">
+
+<ul class="pdm-wrapper2">
+<li class="pdm2">
+<span class="pdm_caption">Возраст:</span>
+<span class="pdm_value">19</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Рост:</span>
+<span class="pdm_value">166</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Телосложение:</span>
+<span class="pdm_value">Стройная</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Цвет волос:</span>
+<span class="pdm_value">Шатенка</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Владеет:</span>
+<span class="pdm_value">Английским</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Предпочитает:</span>
+<span class="pdm_value">Фуршеты</span>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+
+
+<div class="product-info__row mt-auto">
+
+
+<div class="product-info__price">
+
+<span class="sr-only">Цена</span>
+<span itemprop="price" class="price ">30&nbsp;000&nbsp;₽</span>
+
+
+</div>
+
+
+<a class="inv-btn" href="https://telegram.im/@Vipescort555">Пригласи ее <i class="lni lni-telegram-original"></i></a>
+</div>    
+</div>
+
+
+</div> 
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="widget_container_productlist_10" data-id_widget="10" class=" hidden-lg-up wow NoN animated" data-sortable_element="second_row" data-wow-delay="0.3s" data-wow-offset="50" data-widget_type="productlist" style="visibility: visible; animation-delay: 0.3s;">
+<div id="widget_container_productlist_10" class="product_list pmlpb_widget_owl owl-carousel hidden-lg-up owl-loaded owl-drag" data-navs="true" data-loop="true" data-dots="false" data-arrows="true" data-autoplay="false" data-items="1" data-xs_items="1" data-sm_items="1" data-md_items="2" data-lg_items="1" data-xl_items="1" data-xxl_items="1" data-autoplayspeed="0" data-autoplaytimeout="0" data-animateout="FadeIn" style="">
+
+
+
+
+
+
+<div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s;"><div class="owl-item"><div class="col">
+<div class="product-miniature js-product-miniature typeE1" data-id-product="66" data-id-product-attribute="0">
+<div class="product-miniature__wrapper">
+<div class="thumbnail-container list-view reviews-loading">
+
+<div class="thumbnail-container__img">
+
+<img src="http://promoelitemodels.ru/490-home_default/letisiya.jpg" alt="Наташа" data-full-size-image-url="http://promoelitemodels.ru/490-large_default/letisiya.jpg" width="360" height="480" loading="lazy">
+
+<div class="quick-view">
+<a class="quick-view_btn" href="#" data-link-action="quickview"> </a>
+</div>
+</div>
+
+<div class="product-info">
+<div class="product-info__row">
+
+<h3 class="product-info__title "><a href="http://promoelitemodels.ru/modeli/66-letisiya.html">Наташа</a></h3>
+
+
+<div class="product-info__rating">
+
+<div class="product-minireviews">
+<div class="product-minireviews__icons ">
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="product-info__row">
+
+<div class="product-info__features">
+
+<ul class="pdm-wrapper2">
+<li class="pdm2">
+<span class="pdm_caption">Возраст:</span>
+<span class="pdm_value">22</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Рост:</span>
+<span class="pdm_value">177</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Телосложение:</span>
+<span class="pdm_value">Стройная</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Цвет волос:</span>
+<span class="pdm_value">Брюнетка</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Владеет:</span>
+<span class="pdm_value">Английским</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Предпочитает:</span>
+<span class="pdm_value">Вечеринки</span>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+
+
+<div class="product-info__row mt-auto">
+
+
+<div class="product-info__price">
+
+<span class="sr-only">Цена</span>
+<span itemprop="price" class="price ">55&nbsp;000&nbsp;₽</span>
+
+
+</div>
+
+
+<a class="inv-btn" href="https://telegram.im/@Vipescort555">Пригласи ее <i class="lni lni-telegram-original"></i></a>
+</div>    
+</div>
+
+
+</div> 
+</div>
+</div>
+</div></div><div class="owl-item"><div class="col">
+<div class="product-miniature js-product-miniature typeE1" data-id-product="72" data-id-product-attribute="0">
+<div class="product-miniature__wrapper">
+<div class="thumbnail-container list-view reviews-loading">
+
+<div class="thumbnail-container__img">
+
+<img src="http://promoelitemodels.ru/526-home_default/letisiya.jpg" alt="Корнелия" data-full-size-image-url="http://promoelitemodels.ru/526-large_default/letisiya.jpg" width="360" height="480" loading="lazy">
+
+<div class="quick-view">
+<a class="quick-view_btn" href="#" data-link-action="quickview"> </a>
+</div>
+</div>
+
+<div class="product-info">
+<div class="product-info__row">
+
+<h3 class="product-info__title "><a href="http://promoelitemodels.ru/modeli/72-letisiya.html">Корнелия</a></h3>
+
+
+<div class="product-info__rating">
+
+<div class="product-minireviews">
+<div class="product-minireviews__icons ">
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="product-info__row">
+
+<div class="product-info__features">
+
+<ul class="pdm-wrapper2">
+<li class="pdm2">
+<span class="pdm_caption">Возраст:</span>
+<span class="pdm_value">27</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Рост:</span>
+<span class="pdm_value">178</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Телосложение:</span>
+<span class="pdm_value">Худая</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Цвет волос:</span>
+<span class="pdm_value">Шатенка</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Владеет:</span>
+<span class="pdm_value">Итальянским</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Предпочитает:</span>
+<span class="pdm_value">Путешествия</span>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+
+
+<div class="product-info__row mt-auto">
+
+
+<div class="product-info__price">
+
+<span class="sr-only">Цена</span>
+<span itemprop="price" class="price ">35&nbsp;000&nbsp;₽</span>
+
+
+</div>
+
+
+<a class="inv-btn" href="https://telegram.im/@Vipescort555">Пригласи ее <i class="lni lni-telegram-original"></i></a>
+</div>    
+</div>
+
+
+</div> 
+</div>
+</div>
+</div></div><div class="owl-item"><div class="col">
+<div class="product-miniature js-product-miniature typeE1" data-id-product="74" data-id-product-attribute="0">
+<div class="product-miniature__wrapper">
+<div class="thumbnail-container list-view reviews-loading">
+
+<div class="thumbnail-container__img">
+
+<img src="http://promoelitemodels.ru/538-home_default/letisiya.jpg" alt="Оливия" data-full-size-image-url="http://promoelitemodels.ru/538-large_default/letisiya.jpg" width="360" height="480" loading="lazy">
+
+<div class="quick-view">
+<a class="quick-view_btn" href="#" data-link-action="quickview"> </a>
+</div>
+</div>
+
+<div class="product-info">
+<div class="product-info__row">
+
+<h3 class="product-info__title "><a href="http://promoelitemodels.ru/modeli/74-letisiya.html">Оливия</a></h3>
+
+
+<div class="product-info__rating">
+
+<div class="product-minireviews">
+<div class="product-minireviews__icons ">
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="product-info__row">
+
+<div class="product-info__features">
+
+<ul class="pdm-wrapper2">
+<li class="pdm2">
+<span class="pdm_caption">Возраст:</span>
+<span class="pdm_value">25</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Рост:</span>
+<span class="pdm_value">176</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Телосложение:</span>
+<span class="pdm_value">Худая</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Цвет волос:</span>
+<span class="pdm_value">Блондинка</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Владеет:</span>
+<span class="pdm_value">Французским</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Предпочитает:</span>
+<span class="pdm_value">Командировки</span>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+
+
+<div class="product-info__row mt-auto">
+
+
+<div class="product-info__price">
+
+<span class="sr-only">Цена</span>
+<span itemprop="price" class="price ">50&nbsp;000&nbsp;₽</span>
+
+
+</div>
+
+
+<a class="inv-btn" href="https://telegram.im/@Vipescort555">Пригласи ее <i class="lni lni-telegram-original"></i></a>
+</div>    
+</div>
+
+
+</div> 
+</div>
+</div>
+</div></div><div class="owl-item"><div class="col">
+<div class="product-miniature js-product-miniature typeE1" data-id-product="75" data-id-product-attribute="0">
+<div class="product-miniature__wrapper">
+<div class="thumbnail-container list-view reviews-loading">
+
+<div class="thumbnail-container__img">
+
+<img src="http://promoelitemodels.ru/544-home_default/letisiya.jpg" alt="Диана" data-full-size-image-url="http://promoelitemodels.ru/544-large_default/letisiya.jpg" width="360" height="480" loading="lazy">
+
+<div class="quick-view">
+<a class="quick-view_btn" href="#" data-link-action="quickview"> </a>
+</div>
+</div>
+
+<div class="product-info">
+<div class="product-info__row">
+
+<h3 class="product-info__title "><a href="http://promoelitemodels.ru/modeli/75-letisiya.html">Диана</a></h3>
+
+
+<div class="product-info__rating">
+
+<div class="product-minireviews">
+<div class="product-minireviews__icons ">
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="product-info__row">
+
+<div class="product-info__features">
+
+<ul class="pdm-wrapper2">
+<li class="pdm2">
+<span class="pdm_caption">Возраст:</span>
+<span class="pdm_value">25</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Рост:</span>
+<span class="pdm_value">176</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Телосложение:</span>
+<span class="pdm_value">Худая</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Цвет волос:</span>
+<span class="pdm_value">Блондинка</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Владеет:</span>
+<span class="pdm_value">Испанским</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Предпочитает:</span>
+<span class="pdm_value">Рестораны</span>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+
+
+<div class="product-info__row mt-auto">
+
+
+<div class="product-info__price">
+
+<span class="sr-only">Цена</span>
+<span itemprop="price" class="price ">60&nbsp;000&nbsp;₽</span>
+
+
+</div>
+
+
+<a class="inv-btn" href="https://telegram.im/@Vipescort555">Пригласи ее <i class="lni lni-telegram-original"></i></a>
+</div>    
+</div>
+
+
+</div> 
+</div>
+</div>
+</div></div><div class="owl-item"><div class="col">
+<div class="product-miniature js-product-miniature typeE1" data-id-product="83" data-id-product-attribute="0">
+<div class="product-miniature__wrapper">
+<div class="thumbnail-container list-view reviews-loading">
+
+<div class="thumbnail-container__img">
+
+<img src="http://promoelitemodels.ru/592-home_default/letisiya.jpg" alt="Ника" data-full-size-image-url="http://promoelitemodels.ru/592-large_default/letisiya.jpg" width="360" height="480" loading="lazy">
+
+<div class="quick-view">
+<a class="quick-view_btn" href="#" data-link-action="quickview"> </a>
+</div>
+</div>
+
+<div class="product-info">
+<div class="product-info__row">
+
+<h3 class="product-info__title "><a href="http://promoelitemodels.ru/modeli/83-letisiya.html">Ника</a></h3>
+
+
+<div class="product-info__rating">
+
+<div class="product-minireviews">
+<div class="product-minireviews__icons ">
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="product-info__row">
+
+<div class="product-info__features">
+
+<ul class="pdm-wrapper2">
+<li class="pdm2">
+<span class="pdm_caption">Возраст:</span>
+<span class="pdm_value">24</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Рост:</span>
+<span class="pdm_value">169</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Телосложение:</span>
+<span class="pdm_value">Стройная</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Цвет волос:</span>
+<span class="pdm_value">Блондинка</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Владеет:</span>
+<span class="pdm_value">Французским</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Предпочитает:</span>
+<span class="pdm_value">Путешествия</span>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+
+
+<div class="product-info__row mt-auto">
+
+
+<div class="product-info__price">
+
+<span class="sr-only">Цена</span>
+<span itemprop="price" class="price ">50&nbsp;000&nbsp;₽</span>
+
+
+</div>
+
+
+<a class="inv-btn" href="https://telegram.im/@Vipescort555">Пригласи ее <i class="lni lni-telegram-original"></i></a>
+</div>    
+</div>
+
+
+</div> 
+</div>
+</div>
+</div></div><div class="owl-item"><div class="col">
+<div class="product-miniature js-product-miniature typeE1" data-id-product="68" data-id-product-attribute="0">
+<div class="product-miniature__wrapper">
+<div class="thumbnail-container list-view reviews-loading">
+
+<div class="thumbnail-container__img">
+
+<img src="http://promoelitemodels.ru/502-home_default/letisiya.jpg" alt="Жанна" data-full-size-image-url="http://promoelitemodels.ru/502-large_default/letisiya.jpg" width="360" height="480" loading="lazy">
+
+<div class="quick-view">
+<a class="quick-view_btn" href="#" data-link-action="quickview"> </a>
+</div>
+</div>
+
+<div class="product-info">
+<div class="product-info__row">
+
+<h3 class="product-info__title "><a href="http://promoelitemodels.ru/modeli/68-letisiya.html">Жанна</a></h3>
+
+
+<div class="product-info__rating">
+
+<div class="product-minireviews">
+<div class="product-minireviews__icons ">
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="product-info__row">
+
+<div class="product-info__features">
+
+<ul class="pdm-wrapper2">
+<li class="pdm2">
+<span class="pdm_caption">Возраст:</span>
+<span class="pdm_value">25</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Рост:</span>
+<span class="pdm_value">170</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Телосложение:</span>
+<span class="pdm_value">Стройная</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Цвет волос:</span>
+<span class="pdm_value">Шатенка</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Владеет:</span>
+<span class="pdm_value">Английским</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Предпочитает:</span>
+<span class="pdm_value">Деловые мероприятия</span>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+
+
+<div class="product-info__row mt-auto">
+
+
+<div class="product-info__price">
+
+<span class="sr-only">Цена</span>
+<span itemprop="price" class="price ">68&nbsp;000&nbsp;₽</span>
+
+
+</div>
+
+
+<a class="inv-btn" href="https://telegram.im/@Vipescort555">Пригласи ее <i class="lni lni-telegram-original"></i></a>
+</div>    
+</div>
+
+
+</div> 
+</div>
+</div>
+</div></div></div></div><div class="owl-nav disabled"><button type="button" role="button" aria-label="Navigation" class="owl-prev"><span></span></button><button type="button" role="button" aria-label="Navigation" class="owl-next"><span></span></button></div><div class="owl-dots disabled"></div></div>
+</div>
+
+</div>                    <div id="col_54" class="col col-lg-4 hidden-md-down">
+
+<div id="widget_container_productlist_12" data-id_widget="12" class=" wow NoN animated" data-sortable_element="second_row" data-wow-delay="0.3s" data-wow-offset="50" data-widget_type="productlist" style="visibility: visible; animation-delay: 0.3s;">
+<div id="widget_container_productlist_12" class="product_list row">
+<div class="
+col-6
+col-sm-6
+col-md-12
+col-lg-12
+col-xl-12
+col-xxl-12
+">
+<div class="product-miniature js-product-miniature typeE1" data-id-product="83" data-id-product-attribute="0">
+<div class="product-miniature__wrapper">
+<div class="thumbnail-container list-view reviews-loading">
+
+<div class="thumbnail-container__img">
+
+<img src="http://promoelitemodels.ru/592-home_default/letisiya.jpg" alt="Ника" data-full-size-image-url="http://promoelitemodels.ru/592-large_default/letisiya.jpg" width="360" height="480" loading="lazy">
+
+<div class="quick-view">
+<a class="quick-view_btn" href="#" data-link-action="quickview"> </a>
+</div>
+</div>
+
+<div class="product-info">
+<div class="product-info__row">
+
+<h3 class="product-info__title "><a href="http://promoelitemodels.ru/modeli/83-letisiya.html">Ника</a></h3>
+
+
+<div class="product-info__rating">
+
+<div class="product-minireviews">
+<div class="product-minireviews__icons ">
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="product-info__row">
+
+<div class="product-info__features">
+
+<ul class="pdm-wrapper2">
+<li class="pdm2">
+<span class="pdm_caption">Возраст:</span>
+<span class="pdm_value">24</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Рост:</span>
+<span class="pdm_value">169</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Телосложение:</span>
+<span class="pdm_value">Стройная</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Цвет волос:</span>
+<span class="pdm_value">Блондинка</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Владеет:</span>
+<span class="pdm_value">Французским</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Предпочитает:</span>
+<span class="pdm_value">Путешествия</span>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+
+
+<div class="product-info__row mt-auto">
+
+
+<div class="product-info__price">
+
+<span class="sr-only">Цена</span>
+<span itemprop="price" class="price ">50&nbsp;000&nbsp;₽</span>
+
+
+</div>
+
+
+<a class="inv-btn" href="https://telegram.im/@Vipescort555">Пригласи ее <i class="lni lni-telegram-original"></i></a>
+</div>    
+</div>
+
+
+</div> 
+</div>
+</div>
+</div>
+<div class="
+col-6
+col-sm-6
+col-md-12
+col-lg-12
+col-xl-12
+col-xxl-12
+">
+<div class="product-miniature js-product-miniature typeE1" data-id-product="78" data-id-product-attribute="0">
+<div class="product-miniature__wrapper">
+<div class="thumbnail-container list-view reviews-loading">
+
+<div class="thumbnail-container__img">
+
+<img src="http://promoelitemodels.ru/562-home_default/letisiya.jpg" alt="Фаина" data-full-size-image-url="http://promoelitemodels.ru/562-large_default/letisiya.jpg" width="360" height="480" loading="lazy">
+
+<div class="quick-view">
+<a class="quick-view_btn" href="#" data-link-action="quickview"> </a>
+</div>
+</div>
+
+<div class="product-info">
+<div class="product-info__row">
+
+<h3 class="product-info__title "><a href="http://promoelitemodels.ru/modeli/78-letisiya.html">Фаина</a></h3>
+
+
+<div class="product-info__rating">
+
+<div class="product-minireviews">
+<div class="product-minireviews__icons ">
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="product-info__row">
+
+<div class="product-info__features">
+
+<ul class="pdm-wrapper2">
+<li class="pdm2">
+<span class="pdm_caption">Возраст:</span>
+<span class="pdm_value">32</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Рост:</span>
+<span class="pdm_value">175</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Телосложение:</span>
+<span class="pdm_value">Худая</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Цвет волос:</span>
+<span class="pdm_value">Блондинка</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Владеет:</span>
+<span class="pdm_value">Немецким</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Предпочитает:</span>
+<span class="pdm_value">Вечеринки</span>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+
+
+<div class="product-info__row mt-auto">
+
+
+<div class="product-info__price">
+
+<span class="sr-only">Цена</span>
+<span itemprop="price" class="price ">35&nbsp;000&nbsp;₽</span>
+
+
+</div>
+
+
+<a class="inv-btn" href="https://telegram.im/@Vipescort555">Пригласи ее <i class="lni lni-telegram-original"></i></a>
+</div>    
+</div>
+
+
+</div> 
+</div>
+</div>
+</div>
+<div class="
+col-6
+col-sm-6
+col-md-12
+col-lg-12
+col-xl-12
+col-xxl-12
+">
+<div class="product-miniature js-product-miniature typeE1" data-id-product="67" data-id-product-attribute="0">
+<div class="product-miniature__wrapper">
+<div class="thumbnail-container list-view reviews-loading">
+
+<div class="thumbnail-container__img">
+
+<img src="http://promoelitemodels.ru/496-home_default/letisiya.jpg" alt="София" data-full-size-image-url="http://promoelitemodels.ru/496-large_default/letisiya.jpg" width="360" height="480" loading="lazy">
+
+<div class="quick-view">
+<a class="quick-view_btn" href="#" data-link-action="quickview"> </a>
+</div>
+</div>
+
+<div class="product-info">
+<div class="product-info__row">
+
+<h3 class="product-info__title "><a href="http://promoelitemodels.ru/modeli/67-letisiya.html">София</a></h3>
+
+
+<div class="product-info__rating">
+
+<div class="product-minireviews">
+<div class="product-minireviews__icons ">
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 14" style="width:14px;fill:#f9f0d2" xml:space="preserve">
+<g style="clip-path:url(#SVGID_00000039113184228437632860000003561846459438739086_);">
+<path class="st1" d="M6.8,0.5L5.1,3.9L1.2,4.5c-0.7,0.1-1,0.9-0.5,1.4l2.8,2.7l-0.7,3.8c-0.1,0.7,0.6,1.2,1.2,0.9l3.4-1.8l3.4,1.8
+c0.6,0.3,1.3-0.2,1.2-0.9l-0.7-3.8l2.8-2.7c0.5-0.5,0.2-1.3-0.5-1.4L9.9,3.9L8.2,0.5C7.9-0.2,7.1-0.2,6.8,0.5L6.8,0.5z"></path>
+</g>
+</svg>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="product-info__row">
+
+<div class="product-info__features">
+
+<ul class="pdm-wrapper2">
+<li class="pdm2">
+<span class="pdm_caption">Возраст:</span>
+<span class="pdm_value">24</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Рост:</span>
+<span class="pdm_value">178</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Телосложение:</span>
+<span class="pdm_value">Худая</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Цвет волос:</span>
+<span class="pdm_value">Брюнетка</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Владеет:</span>
+<span class="pdm_value">Английским</span>
+</li>
+<li class="pdm2">
+<span class="pdm_caption">Предпочитает:</span>
+<span class="pdm_value">Фуршеты</span>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+
+
+<div class="product-info__row mt-auto">
+
+
+<div class="product-info__price">
+
+<span class="sr-only">Цена</span>
+<span itemprop="price" class="price ">40&nbsp;000&nbsp;₽</span>
+
+
+</div>
+
+
+<a class="inv-btn" href="https://telegram.im/@Vipescort555">Пригласи ее <i class="lni lni-telegram-original"></i></a>
+</div>    
+</div>
+
+
+</div> 
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>            </div>                        
+
+</div>
+</section>            <section id="block_15" class="screen block-bg block_container">
+
+
+
+<div class="container">
+<div id="row_32" class="row">
+<div id="col_50" class="col-12">
+
+<div id="widget_container_button_3" data-id_widget="3" class=" gld" data-sortable_element="second_row" data-widget_type="button">
+<a id="widget_container_button_3" class="btn gld wow  animated" href="https://telegram.im/@Vipescort555" style="visibility: visible;">
+<span>Уточнить детали</span>    </a>                                </div>
+
+
+<div id="widget_container_review_2" data-id_widget="2" class="" data-sortable_element="second_row" data-widget_type="review">
+<div id="widget_container_review_2" class="testimonial-wrap pmlpb_widget_owl owl-carousel owl-loaded owl-drag" data-navs="true" data-loop="true" data-dots="false" data-arrows="true" data-autoplay="true" data-items="1" data-xs_items="1" data-sm_items="1" data-md_items="2" data-lg_items="2" data-xl_items="3" data-xxl_items="3" data-autoplayspeed="1000" data-autoplaytimeout="1000" data-animateout="" data-animatein="">
+
+
+
+
+
+
+<div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1383px, 0px, 0px); transition: all 0.25s ease 0s; width: 5536px;"><div class="owl-item cloned" style="width: 461.333px;"><div class="po-item">
+<div class="row align-items-center">
+<div class="col-12">
+<div class="po-img">
+<img class="pos-img img-fluid" src="http://promoelitemodels.ru/modules/masterium/views/img/widgets/review//3b96140ca7501bca3965846724b74a44.webp" alt="Знакомства медийными девушками" loading="lazy">
+</div>
+</div>
+<div class="col-12">
+<div class="po-title">Знакомства медийными девушками</div>
+</div>
+</div>
+<div class="row po-msg">
+<div class="col-12">
+Вы больше не нуждаетесь в том, чтобы смотреть на обложки глянцевых журналов и мечтать о недоступных красотках, поскольку теперь это может стать реальностью. Наше агентство предоставляет доступ к базе Топ-девушек, которые включают в себя актрис, телеведущих, звезд социальных сетей, победительниц конкурсов красоты и другие медийные личности.
+</div>
+</div>
+</div></div><div class="owl-item cloned" style="width: 461.333px;"><div class="po-item">
+<div class="row align-items-center">
+<div class="col-12">
+<div class="po-img">
+<img class="pos-img img-fluid" src="http://promoelitemodels.ru/modules/masterium/views/img/widgets/review//7a00d7f86d78dca49a5f8495ef964995.webp" alt="Модели для путешествий и поездок" loading="lazy">
+</div>
+</div>
+<div class="col-12">
+<div class="po-title">Модели для путешествий и поездок</div>
+</div>
+</div>
+<div class="row po-msg">
+<div class="col-12">
+Для деловых поездок и встреч, особенно заграничных, отправляться в командировку одному не рекомендуется, поэтому иметь рядом красивую спутницу для важных переговоров было бы неплохо, так как она может разрядить обстановку и добавить солидности. Также наши VIP девушки могут помочь вам скрасить время отдыха на лазурном берегу, так как в одиночестве никто не хочет проводить время.
+</div>
+</div>
+</div></div><div class="owl-item cloned" style="width: 461.333px;"><div class="po-item">
+<div class="row align-items-center">
+<div class="col-12">
+<div class="po-img">
+<img class="pos-img img-fluid" src="http://promoelitemodels.ru/modules/masterium/views/img/widgets/review//1171fdf65e2e0be81bafa9c76ab110a9.webp" alt="Подбор любовниц и содержанок" loading="lazy">
+</div>
+</div>
+<div class="col-12">
+<div class="po-title">Подбор любовниц и содержанок</div>
+</div>
+</div>
+<div class="row po-msg">
+<div class="col-12">
+Если Вы ищете острых ощущений и готовы к незабываемым ночам, которые оставят Вас в экстазе, то эта услуга для Вас. Наше агентство гарантирует полную конфиденциальность и воплощение самых тайных фантазий в реальность, работая по девизу: всё строго секретно, оперативно, надёжно и результативно!
+</div>
+</div>
+</div></div><div class="owl-item active" style="width: 461.333px;"><div class="po-item">
+<div class="row align-items-center">
+<div class="col-12">
+<div class="po-img">
+<img class="pos-img img-fluid" src="http://promoelitemodels.ru/modules/masterium/views/img/widgets/review//599a30a46c9a8714e140236ce67799e9.webp" alt="Сопровождение" loading="lazy">
+</div>
+</div>
+<div class="col-12">
+<div class="po-title">Сопровождение</div>
+</div>
+</div>
+<div class="row po-msg">
+<div class="col-12">
+Рядом с леди будет приятно провести любое деловое или светское мероприятие, так как она объединяет в себе неповторимую грацию, изящность, соблазнительность языка тела и точёные формы, которые ранее не удавалось найти.
+</div>
+</div>
+</div></div><div class="owl-item active" style="width: 461.333px;"><div class="po-item">
+<div class="row align-items-center">
+<div class="col-12">
+<div class="po-img">
+<img class="pos-img img-fluid" src="http://promoelitemodels.ru/modules/masterium/views/img/widgets/review//828568daae6a3f1678feb7431814d1ee.webp" alt="VIP знакомства" loading="lazy">
+</div>
+</div>
+<div class="col-12">
+<div class="po-title">VIP знакомства</div>
+</div>
+</div>
+<div class="row po-msg">
+<div class="col-12">
+Только успешные и уверенные в себе деловые мужчины могут позволить себе элитные эскорт услуги, чтобы роскошно отдыхать с модельными девушками. Мы гарантируем подбор леди на любой случай, с которой вы можете наслаждаться своим отдыхом и не беспокоиться о том, что окружающие узнают правду о вашей спутнице, которая обладает невероятной харизмой и привлекательностью.
+</div>
+</div>
+</div></div><div class="owl-item active" style="width: 461.333px;"><div class="po-item">
+<div class="row align-items-center">
+<div class="col-12">
+<div class="po-img">
+<img class="pos-img img-fluid" src="http://promoelitemodels.ru/modules/masterium/views/img/widgets/review//36b22213cd27e846e2b0be92e80be82f.webp" alt="Девушки для мероприятий" loading="lazy">
+</div>
+</div>
+<div class="col-12">
+<div class="po-title">Девушки для мероприятий</div>
+</div>
+</div>
+<div class="row po-msg">
+<div class="col-12">
+Наша компания поможет найти подходящую спутницу для различных мероприятий, таких как светские вечеринки, встречи с партнерами или другие мероприятия. Наши эскорт-девушки могут помочь повысить ваш статус в глазах окружающих, что может привести к положительным результатам в переговорах, заключении сделок и т.д.
+</div>
+</div>
+</div></div><div class="owl-item" style="width: 461.333px;"><div class="po-item">
+<div class="row align-items-center">
+<div class="col-12">
+<div class="po-img">
+<img class="pos-img img-fluid" src="http://promoelitemodels.ru/modules/masterium/views/img/widgets/review//3b96140ca7501bca3965846724b74a44.webp" alt="Знакомства медийными девушками" loading="lazy">
+</div>
+</div>
+<div class="col-12">
+<div class="po-title">Знакомства медийными девушками</div>
+</div>
+</div>
+<div class="row po-msg">
+<div class="col-12">
+Вы больше не нуждаетесь в том, чтобы смотреть на обложки глянцевых журналов и мечтать о недоступных красотках, поскольку теперь это может стать реальностью. Наше агентство предоставляет доступ к базе Топ-девушек, которые включают в себя актрис, телеведущих, звезд социальных сетей, победительниц конкурсов красоты и другие медийные личности.
+</div>
+</div>
+</div></div><div class="owl-item" style="width: 461.333px;"><div class="po-item">
+<div class="row align-items-center">
+<div class="col-12">
+<div class="po-img">
+<img class="pos-img img-fluid" src="http://promoelitemodels.ru/modules/masterium/views/img/widgets/review//7a00d7f86d78dca49a5f8495ef964995.webp" alt="Модели для путешествий и поездок" loading="lazy">
+</div>
+</div>
+<div class="col-12">
+<div class="po-title">Модели для путешествий и поездок</div>
+</div>
+</div>
+<div class="row po-msg">
+<div class="col-12">
+Для деловых поездок и встреч, особенно заграничных, отправляться в командировку одному не рекомендуется, поэтому иметь рядом красивую спутницу для важных переговоров было бы неплохо, так как она может разрядить обстановку и добавить солидности. Также наши VIP девушки могут помочь вам скрасить время отдыха на лазурном берегу, так как в одиночестве никто не хочет проводить время.
+</div>
+</div>
+</div></div><div class="owl-item" style="width: 461.333px;"><div class="po-item">
+<div class="row align-items-center">
+<div class="col-12">
+<div class="po-img">
+<img class="pos-img img-fluid" src="http://promoelitemodels.ru/modules/masterium/views/img/widgets/review//1171fdf65e2e0be81bafa9c76ab110a9.webp" alt="Подбор любовниц и содержанок" loading="lazy">
+</div>
+</div>
+<div class="col-12">
+<div class="po-title">Подбор любовниц и содержанок</div>
+</div>
+</div>
+<div class="row po-msg">
+<div class="col-12">
+Если Вы ищете острых ощущений и готовы к незабываемым ночам, которые оставят Вас в экстазе, то эта услуга для Вас. Наше агентство гарантирует полную конфиденциальность и воплощение самых тайных фантазий в реальность, работая по девизу: всё строго секретно, оперативно, надёжно и результативно!
+</div>
+</div>
+</div></div><div class="owl-item cloned" style="width: 461.333px;"><div class="po-item">
+<div class="row align-items-center">
+<div class="col-12">
+<div class="po-img">
+<img class="pos-img img-fluid" src="http://promoelitemodels.ru/modules/masterium/views/img/widgets/review//599a30a46c9a8714e140236ce67799e9.webp" alt="Сопровождение" loading="lazy">
+</div>
+</div>
+<div class="col-12">
+<div class="po-title">Сопровождение</div>
+</div>
+</div>
+<div class="row po-msg">
+<div class="col-12">
+Рядом с леди будет приятно провести любое деловое или светское мероприятие, так как она объединяет в себе неповторимую грацию, изящность, соблазнительность языка тела и точёные формы, которые ранее не удавалось найти.
+</div>
+</div>
+</div></div><div class="owl-item cloned" style="width: 461.333px;"><div class="po-item">
+<div class="row align-items-center">
+<div class="col-12">
+<div class="po-img">
+<img class="pos-img img-fluid" src="http://promoelitemodels.ru/modules/masterium/views/img/widgets/review//828568daae6a3f1678feb7431814d1ee.webp" alt="VIP знакомства" loading="lazy">
+</div>
+</div>
+<div class="col-12">
+<div class="po-title">VIP знакомства</div>
+</div>
+</div>
+<div class="row po-msg">
+<div class="col-12">
+Только успешные и уверенные в себе деловые мужчины могут позволить себе элитные эскорт услуги, чтобы роскошно отдыхать с модельными девушками. Мы гарантируем подбор леди на любой случай, с которой вы можете наслаждаться своим отдыхом и не беспокоиться о том, что окружающие узнают правду о вашей спутнице, которая обладает невероятной харизмой и привлекательностью.
+</div>
+</div>
+</div></div><div class="owl-item cloned" style="width: 461.333px;"><div class="po-item">
+<div class="row align-items-center">
+<div class="col-12">
+<div class="po-img">
+<img class="pos-img img-fluid" src="http://promoelitemodels.ru/modules/masterium/views/img/widgets/review//36b22213cd27e846e2b0be92e80be82f.webp" alt="Девушки для мероприятий" loading="lazy">
+</div>
+</div>
+<div class="col-12">
+<div class="po-title">Девушки для мероприятий</div>
+</div>
+</div>
+<div class="row po-msg">
+<div class="col-12">
+Наша компания поможет найти подходящую спутницу для различных мероприятий, таких как светские вечеринки, встречи с партнерами или другие мероприятия. Наши эскорт-девушки могут помочь повысить ваш статус в глазах окружающих, что может привести к положительным результатам в переговорах, заключении сделок и т.д.
+</div>
+</div>
+</div></div></div></div><div class="owl-nav disabled"><button type="button" role="button" aria-label="Navigation" class="owl-prev"><span></span></button><button type="button" role="button" aria-label="Navigation" class="owl-next"><span></span></button></div><div class="owl-dots disabled"></div></div>
+</div>
+
+</div>            </div>                        
+
+</div>
+</section>            <section id="block_157" class="screen block-bg block_container">
+
+
+
+<div class="container">
+<div id="row_265" class="row">
+<div id="col_379" class="col">
+<div id="row_266" class="row">
+<div id="col_380" class="col-8 col-lg-6 bg-kont">
+
+<div id="widget_container_title_10" data-id_widget="10" class="" data-sortable_element="widget" data-widget_type="title">
+<h1 id="widget_container_title_10">
+Как связаться с нашим агенством
+</h1>
+
+</div>
+
+
+<div id="widget_container_text_23" data-id_widget="23" class="" data-sortable_element="widget" data-widget_type="text">
+<div id="widget_container_text_23" class="text">
+<a href="tel:+79381108449"><i class="lni lni-phone"></i> +7 (938) 110 84 49</a><br><br><a href="https://wa.me/79381108449"><i class="lni lni-whatsapp"></i>&nbsp;Whatsapp</a>
+<br><br><a href="https://telegram.im/@Vipescort555"><i class="lni lni-telegram-original"></i>&nbsp;Telegram</a>
+</div>
+
+</div>
+
+</div>            </div>                </div>            </div>                        
+
+</div>
+</section>            <section id="block_191" class="screen block-bg block_container">
+
+
+
+<div class="container">
+<div id="row_322" class="row">
+<div id="col_458" class="col">
+<div id="row_323" class="row">
+<div id="col_459" class="col-8 col-lg-6 bg-kont">
+
+<div id="widget_container_title_11" data-id_widget="11" class="" data-sortable_element="widget" data-widget_type="title">
+<h1 id="widget_container_title_11">
+<p>Политика конфиденциальности</p>
+</h1>
+
+</div>
+
+
+<div id="widget_container_text_24" data-id_widget="24" class="" data-sortable_element="widget" data-widget_type="text">
+<div id="widget_container_text_24" class="text">
+<p>1. ТЕРМИНЫ И ОПРЕДЕЛЕНИЯ
+<font face="LineIcons">
+</font></p><p><font face="LineIcons">Компания – PromoEliteModels, осуществляющая предпринимательскую деятельность по организации элитного отдыха. Клиент – любое физическое лицо, принявшее (акцептировавшее) публичную оферту, размещенную на Сайте.
+</font></p><p><font face="LineIcons">Сайт – http://PromoEliteModels.ru. Договор – договор возмездного оказания услуг, заключаемый между Компанией и Клиентом, посредством принятия (акцепта) Клиентом публичной оферты, размещенной на Сайте.
+</font></p><p><font face="LineIcons">Политика конфиденциальности персональной информации (далее — Политика) действует в отношении всей информации, которую Компания может получить о Клиенте во время использования им Сайта. Использование Сайта означает безоговорочное согласие Клиента с настоящей Политикой и указанными в ней условиями обработки его персональной информации; в случае несогласия с этими условиями Клиент должен воздержаться от использования Сайта.
+</font></p><p><font face="LineIcons">2. ПЕРСОНАЛЬНАЯ ИНФОРМАЦИЯ КЛИЕНТА, КОТОРАЯ ОБРАБАТЫВАЕТСЯ КОМПАНИЕЙ
+</font></p><p><font face="LineIcons">2.1. В рамках настоящей Политики под персональной информацией понимаются персональная информация, которую Клиент предоставляет о себе самостоятельно в процессе использования Сайта, включая персональные данные Клиента, а также идентификационные, финансовые, платежные, учетные и контактные данные. Обязательная для предоставления информация помечена специальным образом. Иная информация предоставляется Клиентом на его усмотрение.
+</font></p><p><font face="LineIcons">2.2. Настоящая Политика применима только к информации, обрабатываемой в ходе использования Сайта, не контролирует и не несет ответственность за обработку информации сайтами третьих лиц, на которые Клиент может перейти по ссылкам, доступным на Сайте, в том числе в результатах поиска.
+</font></p><p><font face="LineIcons">2.3. Компания оставляет за собой право проверять достоверность персональной информации, предоставляемой Клиентом. Тем не менее, Компания исходит из того, что Клиент предоставляет достоверную и 2 достаточную информацию и поддерживает эту информацию в актуальном состоянии.
+</font></p><p><font face="LineIcons">3. ЦЕЛИ ОБРАБОТКИ ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ КЛИЕНТОВ
+</font></p><p><font face="LineIcons">3.1. Компания собирает и хранит только ту персональную информацию, которая необходима для надлежащего оказания услуг в соответствии с положениями публичной оферты, размещенной на Сайте.
+</font></p><p><font face="LineIcons">3.2. Персональную информацию Клиента Компания обрабатывает в следующих целях:
+</font></p><p><font face="LineIcons">3.2.1. Идентификация стороны в рамках заключения Договора;
+</font></p><p><font face="LineIcons">3.2.2. Связь с Клиентом, в том числе направление уведомлений, запросов и информации, касающихся условий Договор, а также обработка запросов и заявок от Клиента;
+</font></p><p><font face="LineIcons">3.2.3. Улучшение качества работы Сайта, удобства его использования;
+</font></p><p><font face="LineIcons">3.2.4. Проведение статистических и иных исследований на основе обезличенных данных.
+</font></p><p><font face="LineIcons">4. УСЛОВИЯ ОБРАБОТКИ ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ КЛИЕНТОВ И ЕЕ ПЕРЕДАЧИ ТРЕТЬИМ ЛИЦАМ
+</font></p><p><font face="LineIcons">4.1. Компания хранит персональную информацию Клиентов в соответствии с требованиями законодательства.
+</font></p><p><font face="LineIcons">4.2. В отношении персональной информации Клиента сохраняется ее конфиденциальность, кроме случаев добровольного предоставления Клиентом информации о себе для общего доступа неограниченному кругу лиц.
+</font></p><p><font face="LineIcons">4.3. Компания вправе передать персональную информацию Клиента третьим лицам в следующих случаях:
+</font></p><p><font face="LineIcons">4.3.1. Клиент выразил согласие на такие действия;
+</font></p><p><font face="LineIcons">4.3.2. Передача необходима для исполнения условий Договора с Клиентом;
+</font></p><p><font face="LineIcons">4.3.3. Передача предусмотрена российским или иным применимым законодательством в рамках установленной законодательством процедуры;
+</font></p><p><font face="LineIcons">4.3.4. Такая передача происходит в рамках продажи или иной передачи бизнеса (полностью или в части), при этом к приобретателю переходят все обязательства по соблюдению условий настоящей Политики применительно к полученной им персональной информации;
+</font></p><p><font face="LineIcons">4.4. При обработке персональных данных Клиентов Компания руководствуется Федеральным законом Российской Федерации № 152-ФЗ от 27 июля 2006 года «О персональных данных».
+</font></p><p><font face="LineIcons">5. ИЗМЕНЕНИЕ И УДАЛЕНИЕ ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ. ОБЯЗАТЕЛЬНОЕ ХРАНЕНИЕ ДАННЫХ
+</font></p><p><font face="LineIcons">5.1. Клиент может изменить (обновить, дополнить) предоставленную им персональную информацию или её часть.
+</font></p><p><font face="LineIcons">5.2. Право, предусмотренное п. 5.1. настоящей Политики может быть ограничено в соответствии с требованиями законодательства. В частности, такие ограничения могут предусматривать обязанность Компании сохранить измененную или удаленную Клиентом информацию на срок, установленный законодательством, и передать такую информацию в соответствии с законодательно установленной процедурой государственному органу.
+</font></p><p><font face="LineIcons">6. МЕРЫ, ПРИМЕНЯЕМЫЕ ДЛЯ ЗАЩИТЫ ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ КЛИЕНТА 6.1.
+</font></p><p><font face="LineIcons">Компания принимает необходимые и достаточные организационные и технические меры для защиты персональной информации Клиента от неправомерного или случайного доступа, уничтожения, изменения, блокирования, копирования, распространения, а также от иных неправомерных действий с ней третьих лиц, включая меры по безопасной передаче данных с использованием современных методов шифрования.
+</font></p><p><font face="LineIcons">7. ИЗМЕНЕНИЕ ПОЛИТИКИ КОНФИДЕНЦИАЛЬНОСТИ. ПРИМЕНИМОЕ ЗАКОНОДАТЕЛЬСТВО
+</font></p><p><font face="LineIcons">7.1. Компания имеет право вносить изменения в настоящую Политику конфиденциальности. При внесении изменений в актуальной редакции указывается дата последнего обновления. Новая редакция Политики вступает в силу с момента ее размещения, если иное не предусмотрено новой редакцией Политики.
+</font></p><p><font face="LineIcons">7.2. К настоящей Политике и отношениям между Клиентом и Компанией, возникающим в связи с применением Политики конфиденциальности, подлежит применению право Российской Федерации.</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p>
+</div>
+
+</div>
+
+</div>            </div>                </div>            </div>                        
+
+</div>
+</section>            <section id="block_192" class="screen block-bg block_container">
+
+
+
+<div class="container">
+<div id="row_324" class="row">
+<div id="col_460" class="col">
+<div id="row_325" class="row">
+<div id="col_461" class="col-8 col-lg-6 bg-kont">
+
+<div id="widget_container_title_12" data-id_widget="12" class="" data-sortable_element="widget" data-widget_type="title">
+<h1 id="widget_container_title_12">
+<p>Политика конфиденциальности</p>
+</h1>
+
+</div>
+
+
+<div id="widget_container_text_25" data-id_widget="25" class="" data-sortable_element="widget" data-widget_type="text">
+<div id="widget_container_text_25" class="text">
+<p>1. ТЕРМИНЫ И ОПРЕДЕЛЕНИЯ
+<font face="LineIcons">
+</font></p><p><font face="LineIcons">Компания – PromoEliteModels, осуществляющая предпринимательскую деятельность по организации элитного отдыха. Клиент – любое физическое лицо, принявшее (акцептировавшее) публичную оферту, размещенную на Сайте.
+</font></p><p><font face="LineIcons">Сайт – http://PromoEliteModels.ru. Договор – договор возмездного оказания услуг, заключаемый между Компанией и Клиентом, посредством принятия (акцепта) Клиентом публичной оферты, размещенной на Сайте.
+</font></p><p><font face="LineIcons">Политика конфиденциальности персональной информации (далее — Политика) действует в отношении всей информации, которую Компания может получить о Клиенте во время использования им Сайта. Использование Сайта означает безоговорочное согласие Клиента с настоящей Политикой и указанными в ней условиями обработки его персональной информации; в случае несогласия с этими условиями Клиент должен воздержаться от использования Сайта.
+</font></p><p><font face="LineIcons">2. ПЕРСОНАЛЬНАЯ ИНФОРМАЦИЯ КЛИЕНТА, КОТОРАЯ ОБРАБАТЫВАЕТСЯ КОМПАНИЕЙ
+</font></p><p><font face="LineIcons">2.1. В рамках настоящей Политики под персональной информацией понимаются персональная информация, которую Клиент предоставляет о себе самостоятельно в процессе использования Сайта, включая персональные данные Клиента, а также идентификационные, финансовые, платежные, учетные и контактные данные. Обязательная для предоставления информация помечена специальным образом. Иная информация предоставляется Клиентом на его усмотрение.
+</font></p><p><font face="LineIcons">2.2. Настоящая Политика применима только к информации, обрабатываемой в ходе использования Сайта, не контролирует и не несет ответственность за обработку информации сайтами третьих лиц, на которые Клиент может перейти по ссылкам, доступным на Сайте, в том числе в результатах поиска.
+</font></p><p><font face="LineIcons">2.3. Компания оставляет за собой право проверять достоверность персональной информации, предоставляемой Клиентом. Тем не менее, Компания исходит из того, что Клиент предоставляет достоверную и 2 достаточную информацию и поддерживает эту информацию в актуальном состоянии.
+</font></p><p><font face="LineIcons">3. ЦЕЛИ ОБРАБОТКИ ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ КЛИЕНТОВ
+</font></p><p><font face="LineIcons">3.1. Компания собирает и хранит только ту персональную информацию, которая необходима для надлежащего оказания услуг в соответствии с положениями публичной оферты, размещенной на Сайте.
+</font></p><p><font face="LineIcons">3.2. Персональную информацию Клиента Компания обрабатывает в следующих целях:
+</font></p><p><font face="LineIcons">3.2.1. Идентификация стороны в рамках заключения Договора;
+</font></p><p><font face="LineIcons">3.2.2. Связь с Клиентом, в том числе направление уведомлений, запросов и информации, касающихся условий Договор, а также обработка запросов и заявок от Клиента;
+</font></p><p><font face="LineIcons">3.2.3. Улучшение качества работы Сайта, удобства его использования;
+</font></p><p><font face="LineIcons">3.2.4. Проведение статистических и иных исследований на основе обезличенных данных.
+</font></p><p><font face="LineIcons">4. УСЛОВИЯ ОБРАБОТКИ ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ КЛИЕНТОВ И ЕЕ ПЕРЕДАЧИ ТРЕТЬИМ ЛИЦАМ
+</font></p><p><font face="LineIcons">4.1. Компания хранит персональную информацию Клиентов в соответствии с требованиями законодательства.
+</font></p><p><font face="LineIcons">4.2. В отношении персональной информации Клиента сохраняется ее конфиденциальность, кроме случаев добровольного предоставления Клиентом информации о себе для общего доступа неограниченному кругу лиц.
+</font></p><p><font face="LineIcons">4.3. Компания вправе передать персональную информацию Клиента третьим лицам в следующих случаях:
+</font></p><p><font face="LineIcons">4.3.1. Клиент выразил согласие на такие действия;
+</font></p><p><font face="LineIcons">4.3.2. Передача необходима для исполнения условий Договора с Клиентом;
+</font></p><p><font face="LineIcons">4.3.3. Передача предусмотрена российским или иным применимым законодательством в рамках установленной законодательством процедуры;
+</font></p><p><font face="LineIcons">4.3.4. Такая передача происходит в рамках продажи или иной передачи бизнеса (полностью или в части), при этом к приобретателю переходят все обязательства по соблюдению условий настоящей Политики применительно к полученной им персональной информации;
+</font></p><p><font face="LineIcons">4.4. При обработке персональных данных Клиентов Компания руководствуется Федеральным законом Российской Федерации № 152-ФЗ от 27 июля 2006 года «О персональных данных».
+</font></p><p><font face="LineIcons">5. ИЗМЕНЕНИЕ И УДАЛЕНИЕ ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ. ОБЯЗАТЕЛЬНОЕ ХРАНЕНИЕ ДАННЫХ
+</font></p><p><font face="LineIcons">5.1. Клиент может изменить (обновить, дополнить) предоставленную им персональную информацию или её часть.
+</font></p><p><font face="LineIcons">5.2. Право, предусмотренное п. 5.1. настоящей Политики может быть ограничено в соответствии с требованиями законодательства. В частности, такие ограничения могут предусматривать обязанность Компании сохранить измененную или удаленную Клиентом информацию на срок, установленный законодательством, и передать такую информацию в соответствии с законодательно установленной процедурой государственному органу.
+</font></p><p><font face="LineIcons">6. МЕРЫ, ПРИМЕНЯЕМЫЕ ДЛЯ ЗАЩИТЫ ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ КЛИЕНТА 6.1.
+</font></p><p><font face="LineIcons">Компания принимает необходимые и достаточные организационные и технические меры для защиты персональной информации Клиента от неправомерного или случайного доступа, уничтожения, изменения, блокирования, копирования, распространения, а также от иных неправомерных действий с ней третьих лиц, включая меры по безопасной передаче данных с использованием современных методов шифрования.
+</font></p><p><font face="LineIcons">7. ИЗМЕНЕНИЕ ПОЛИТИКИ КОНФИДЕНЦИАЛЬНОСТИ. ПРИМЕНИМОЕ ЗАКОНОДАТЕЛЬСТВО
+</font></p><p><font face="LineIcons">7.1. Компания имеет право вносить изменения в настоящую Политику конфиденциальности. При внесении изменений в актуальной редакции указывается дата последнего обновления. Новая редакция Политики вступает в силу с момента ее размещения, если иное не предусмотрено новой редакцией Политики.
+</font></p><p><font face="LineIcons">7.2. К настоящей Политике и отношениям между Клиентом и Компанией, возникающим в связи с применением Политики конфиденциальности, подлежит применению право Российской Федерации.</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p><p><font face="LineIcons">
+</font></p>
+</div>
+
+</div>
+
+</div>            </div>                </div>            </div>                        
+
+</div>
+</section>    
+
+
+
+
+</div>
+
+<footer id="footer" class="js-footer">
+<section id="block_16" class=" block-bg block_container">
+
+
+
+<div class="container">
+<div id="row_326" class="row">
+<div id="col_462" class="col">
+
+<div id="widget_container_text_22" data-id_widget="22" class="" data-sortable_element="second_row" data-widget_type="text">
+<div id="widget_container_text_22" class="text">
+Модельное агенство не предоставляет услуг интимного характера!
+</div>
+</div>
+<div id="widget_container_linklist_2" data-id_widget="2" class="" data-sortable_element="second_row" data-widget_type="linklist">
+<div id="widget_container_linklist_2" class="linklist__wrapper">
+<div class="linklist__block">
+<a class="linklist__item inner_btn" href="#block_191">
+<span>Политика конфиденциальности</span>                 </a>
+</div>
+</div>
+
+
+
+</div>
+
+</div>            </div>                        
+
+</div>
+</section>
+</footer>
+</main>
