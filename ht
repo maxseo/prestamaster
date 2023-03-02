@@ -15,11 +15,6 @@
 	</Files>
 </IfModule>
 
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteCond %{REQUEST_URI} ^/content/56-opt [NC]
-  RewriteRule \.jpg$ - [L]
-</IfModule>
 
 # Send WEBP image if browser accept and if file exists
 # Otherwise, redirect to the controller that will genererate the WEBP image
@@ -111,6 +106,14 @@ RewriteRule ^(.+)\.webp$ %{ENV:REWRITEBASE}modules/jprestaspeedpack/controllers/
 <IfModule mod_expires.c>
     ExpiresActive On
     ExpiresByType image/webp "access plus 1 month"
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_URI} !^/content/56-opt [NC]
+  RewriteCond %{HTTP_ACCEPT} image/webp
+  RewriteCond %{DOCUMENT_ROOT}/$1.webp -f
+  RewriteRule ^(.*).(jpe?g|png)$ /$1.webp [T=image/webp,E=accept:1]
 </IfModule>
 
 # ~~end-jprestaspeedpack~~ Do not remove this comment, Jprestaspeedpack will update it automatically
