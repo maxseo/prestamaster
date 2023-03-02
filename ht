@@ -108,12 +108,21 @@ RewriteRule ^(.+)\.webp$ %{ENV:REWRITEBASE}modules/jprestaspeedpack/controllers/
     ExpiresByType image/webp "access plus 1 month"
 </IfModule>
 
+# Exclude specific page from webp rule
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteCond %{REQUEST_URI} !^/content/56-opt [NC]
   RewriteCond %{HTTP_ACCEPT} image/webp
   RewriteCond %{DOCUMENT_ROOT}/$1.webp -f
   RewriteRule ^(.*).(jpe?g|png)$ /$1.webp [T=image/webp,E=accept:1]
+</IfModule>
+
+# Serve jpeg images on the /content/56-opt page
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_URI} ^/content/56-opt [NC]
+  RewriteCond %{DOCUMENT_ROOT}/$1.jpg -f
+  RewriteRule ^(.*).(jpe?g|png)$ /$1.jpg [L]
 </IfModule>
 
 # ~~end-jprestaspeedpack~~ Do not remove this comment, Jprestaspeedpack will update it automatically
