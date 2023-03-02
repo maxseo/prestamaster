@@ -1,0 +1,361 @@
+# ~~start-jprestaspeedpack~~ Do not remove this comment, Jprestaspeedpack will update it automatically
+
+# Allow webp files to be sent by Apache 2.2
+<IfModule !mod_authz_core.c>
+	<Files ~ "\.(webp)$">
+		Allow from all
+	</Files>
+</IfModule>
+
+# Allow webp files to be sent by Apache 2.4
+<IfModule mod_authz_core.c>
+	<Files ~ "\.(webp)$">
+		Require all granted
+		allow from all
+	</Files>
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_URI} ^/content/56-opt [NC]
+  RewriteRule \.jpg$ - [L]
+</IfModule>
+
+# Send WEBP image if browser accept and if file exists
+# Otherwise, redirect to the controller that will genererate the WEBP image
+<IfModule mod_rewrite.c>
+<IfModule mod_env.c>
+SetEnv HTTP_MOD_REWRITE On
+</IfModule>
+RewriteEngine on
+
+#Domain: twoje-hobby.pl
+RewriteRule . - [E=REWRITEBASE:/]
+
+# Images of products
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteCond %{DOCUMENT_ROOT}%{ENV:REWRITEBASE}/img/p/$1/$1$2$3.webp -s
+RewriteRule ^([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.webp$ %{ENV:REWRITEBASE}img/p/$1/$1$2$3.webp [T=image/webp,L]
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteCond %{DOCUMENT_ROOT}%{ENV:REWRITEBASE}/img/p/$1/$1$2$3.webp !-s
+RewriteRule ^([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.webp$ %{ENV:REWRITEBASE}modules/jprestaspeedpack/controllers/front/webp.php?src=img/p/$1/$1$2$3.jpg [B,L]
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteCond %{DOCUMENT_ROOT}%{ENV:REWRITEBASE}/img/p/$1/$2/$1$2$3$4.webp -s
+RewriteRule ^([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.webp$ %{ENV:REWRITEBASE}img/p/$1/$2/$1$2$3$4.webp [T=image/webp,L]
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteCond %{DOCUMENT_ROOT}%{ENV:REWRITEBASE}/img/p/$1/$2/$1$2$3$4.webp !-s
+RewriteRule ^([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.webp$ %{ENV:REWRITEBASE}modules/jprestaspeedpack/controllers/front/webp.php?src=img/p/$1/$2/$1$2$3$4.jpg [B,L]
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteCond %{DOCUMENT_ROOT}%{ENV:REWRITEBASE}/img/p/$1/$2/$3/$1$2$3$4$5.webp -s
+RewriteRule ^([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.webp$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$1$2$3$4$5.webp [T=image/webp,L]
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteCond %{DOCUMENT_ROOT}%{ENV:REWRITEBASE}/img/p/$1/$2/$3/$1$2$3$4$5.webp !-s
+RewriteRule ^([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.webp$ %{ENV:REWRITEBASE}modules/jprestaspeedpack/controllers/front/webp.php?src=img/p/$1/$2/$3/$1$2$3$4$5.jpg [B,L]
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteCond %{DOCUMENT_ROOT}%{ENV:REWRITEBASE}/img/p/$1/$2/$3/$4/$1$2$3$4$5$6.webp -s
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.webp$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$1$2$3$4$5$6.webp [T=image/webp,L]
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteCond %{DOCUMENT_ROOT}%{ENV:REWRITEBASE}/img/p/$1/$2/$3/$4/$1$2$3$4$5$6.webp !-s
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.webp$ %{ENV:REWRITEBASE}modules/jprestaspeedpack/controllers/front/webp.php?src=img/p/$1/$2/$3/$4/$1$2$3$4$5$6.jpg [B,L]
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteCond %{DOCUMENT_ROOT}%{ENV:REWRITEBASE}/img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6$7.webp -s
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.webp$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6$7.webp [T=image/webp,L]
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteCond %{DOCUMENT_ROOT}%{ENV:REWRITEBASE}/img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6$7.webp !-s
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.webp$ %{ENV:REWRITEBASE}modules/jprestaspeedpack/controllers/front/webp.php?src=img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6$7.jpg [B,L]
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteCond %{DOCUMENT_ROOT}%{ENV:REWRITEBASE}/img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7$8.webp -s
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.webp$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7$8.webp [T=image/webp,L]
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteCond %{DOCUMENT_ROOT}%{ENV:REWRITEBASE}/img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7$8.webp !-s
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.webp$ %{ENV:REWRITEBASE}modules/jprestaspeedpack/controllers/front/webp.php?src=img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7$8.jpg [B,L]
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteCond %{DOCUMENT_ROOT}%{ENV:REWRITEBASE}/img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8$9.webp -s
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.webp$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8$9.webp [T=image/webp,L]
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteCond %{DOCUMENT_ROOT}%{ENV:REWRITEBASE}/img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8$9.webp !-s
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.webp$ %{ENV:REWRITEBASE}modules/jprestaspeedpack/controllers/front/webp.php?src=img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8$9.jpg [B,L]
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteCond %{DOCUMENT_ROOT}%{ENV:REWRITEBASE}/img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9$10.webp -s
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.webp$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9$10.webp [T=image/webp,L]
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteCond %{DOCUMENT_ROOT}%{ENV:REWRITEBASE}/img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9$10.webp !-s
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.webp$ %{ENV:REWRITEBASE}modules/jprestaspeedpack/controllers/front/webp.php?src=img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9$10.jpg [B,L]
+
+# Images of categories
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteCond %{DOCUMENT_ROOT}%{ENV:REWRITEBASE}/img/c/$1$2$3.webp -s
+RewriteRule ^c/([0-9]+)(\-[\.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+\.webp$ %{ENV:REWRITEBASE}img/c/$1$2$3.webp [T=image/webp,L]
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteCond %{DOCUMENT_ROOT}%{ENV:REWRITEBASE}/img/c/$1$2$3.webp !-s
+RewriteRule ^c/([0-9]+)(\-[\.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+\.webp$ %{ENV:REWRITEBASE}modules/jprestaspeedpack/controllers/front/webp.php?src=img/c/$1$2$3.jpg [B,L]
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteCond %{DOCUMENT_ROOT}%{ENV:REWRITEBASE}/img/c/$1$2.webp -s
+RewriteRule ^c/([a-zA-Z_-]+)(-[0-9]+)?/.+\.webp$ %{ENV:REWRITEBASE}img/c/$1$2.webp [T=image/webp,L]
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteCond %{DOCUMENT_ROOT}%{ENV:REWRITEBASE}/img/c/$1$2.webp !-s
+RewriteRule ^c/([a-zA-Z_-]+)(-[0-9]+)?/.+\.webp$ %{ENV:REWRITEBASE}modules/jprestaspeedpack/controllers/front/webp.php?src=img/c/$1$2.jpg [B,L]
+
+# Other images of modules or theme
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteCond %{DOCUMENT_ROOT}%{ENV:REWRITEBASE}$1.webp !-s
+RewriteRule ^(.+)\.webp$ %{ENV:REWRITEBASE}modules/jprestaspeedpack/controllers/front/webp.php?src=$1.jpg [B,L]
+#/Domain: twoje-hobby.pl
+</IfModule>
+
+# Make Apache handle image/webp content type
+<IfModule mod_mime.c>
+	AddType image/webp .webp
+</IfModule>
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/webp "access plus 1 month"
+</IfModule>
+
+# ~~end-jprestaspeedpack~~ Do not remove this comment, Jprestaspeedpack will update it automatically
+
+#WeNet 2022-12-19
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)\.$ /$1 [L,R=302]
+</IfModule>
+
+# ~~start~~ Do not remove this comment, Prestashop will keep automatically the code outside this comment when .htaccess will be generated again
+# .htaccess automaticaly generated by PrestaShop e-commerce open-source solution
+# http://www.prestashop.com - http://www.prestashop.com/forums
+
+<IfModule mod_rewrite.c>
+<IfModule mod_env.c>
+SetEnv HTTP_MOD_REWRITE On
+</IfModule>
+
+RewriteEngine on
+
+
+#Domain: twoje-hobby.pl
+RewriteRule . - [E=REWRITEBASE:/]
+RewriteRule ^api(?:/(.*))?$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
+
+# Images
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteRule ^([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteRule ^([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$1$2$3$4.jpg [L]
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteRule ^([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$1$2$3$4$5.jpg [L]
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$1$2$3$4$5$6.jpg [L]
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6$7.jpg [L]
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7$8.jpg [L]
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8$9.jpg [L]
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteRule ^([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(\-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9$10.jpg [L]
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteRule ^c/([0-9]+)(\-[\.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2$3.jpg [L]
+RewriteCond %{HTTP_HOST} ^twoje-hobby.pl$
+RewriteRule ^c/([a-zA-Z_-]+)(-[0-9]+)?/.+\.jpg$ %{ENV:REWRITEBASE}img/c/$1$2.jpg [L]
+# AlphaImageLoader for IE and fancybox
+RewriteRule ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 [L]
+
+# Dispatcher
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^.*$ %{ENV:REWRITEBASE}index.php [NC,L]
+</IfModule>
+
+AddType application/vnd.ms-fontobject .eot
+AddType font/ttf .ttf
+AddType font/otf .otf
+AddType application/font-woff .woff
+AddType font/woff2 .woff2
+<IfModule mod_headers.c>
+	<FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|svg)$">
+		Header set Access-Control-Allow-Origin "*"
+	</FilesMatch>
+
+    <FilesMatch "\.pdf$">
+      Header set Content-Disposition "Attachment"
+      Header set X-Content-Type-Options "nosniff"
+    </FilesMatch>
+</IfModule>
+
+<Files composer.lock>
+    # Apache 2.2
+    <IfModule !mod_authz_core.c>
+        Order deny,allow
+        Deny from all
+    </IfModule>
+
+    # Apache 2.4
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+</Files>
+<IfModule mod_expires.c>
+	ExpiresActive On
+	ExpiresByType image/gif "access plus 1 month"
+	ExpiresByType image/jpeg "access plus 1 month"
+	ExpiresByType image/png "access plus 1 month"
+	ExpiresByType text/css "access plus 1 week"
+	ExpiresByType text/javascript "access plus 1 week"
+	ExpiresByType application/javascript "access plus 1 week"
+	ExpiresByType application/x-javascript "access plus 1 week"
+	ExpiresByType image/x-icon "access plus 1 year"
+	ExpiresByType image/svg+xml "access plus 1 year"
+	ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
+	ExpiresByType application/font-woff "access plus 1 year"
+	ExpiresByType application/x-font-woff "access plus 1 year"
+	ExpiresByType font/woff2 "access plus 1 year"
+	ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+	ExpiresByType font/opentype "access plus 1 year"
+	ExpiresByType font/ttf "access plus 1 year"
+	ExpiresByType font/otf "access plus 1 year"
+	ExpiresByType application/x-font-ttf "access plus 1 year"
+	ExpiresByType application/x-font-otf "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header unset Etag
+</IfModule>
+FileETag none
+<IfModule mod_deflate.c>
+    <IfModule mod_filter.c>
+        AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/x-javascript font/ttf application/x-font-ttf font/otf application/x-font-otf font/opentype image/svg+xml
+    </IfModule>
+</IfModule>
+
+#If rewrite mod isn't enabled
+ErrorDocument 404 /index.php?controller=404
+
+# ~~end~~ Do not remove this comment, Prestashop will keep automatically the code outside this comment when .htaccess will be generated again
+
+## WeNet 24617740
+### www to non-www
+#RewriteEngine On
+#RewriteCond %{HTTP_HOST} www.twoje-hobby.pl
+#RewriteRule (.*) https://twoje-hobby.pl/$1 [R=302,L]
+
+
+# ~gzip_pagespeed_bottom~
+
+<IfModule mod_deflate.c>
+#Compress HTML, CSS, JavaScript, Text, XML and fonts
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+AddOutputFilterByType DEFLATE application/x-font
+AddOutputFilterByType DEFLATE application/x-font-opentype
+AddOutputFilterByType DEFLATE application/x-font-otf
+AddOutputFilterByType DEFLATE application/x-font-truetype
+AddOutputFilterByType DEFLATE application/x-font-ttf
+AddOutputFilterByType DEFLATE application/x-javascript
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE font/opentype
+AddOutputFilterByType DEFLATE font/otf
+AddOutputFilterByType DEFLATE font/ttf
+AddOutputFilterByType DEFLATE image/svg+xml
+AddOutputFilterByType DEFLATE image/x-icon
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/xml
+</IfModule>
+
+# ~gzip_pagespeed_bottom_end~
+
+# ~Browser_pagespeed_bottom~
+#Browser
+# ~Browser_pagespeed_bottom_end~
+
+# ~pagespeed_bottom~
+
+# Google PageSpeed Module
+<IfModule pagespeed_module>
+ModPagespeed Off
+</IfModule>
+# END Google PageSpeed Module
+
+# ~pagespeed_bottom_end~
+
+#WeNet 2022-12-19
+Redirect 301 /malowanie-fabula-abstrakcja /3-malowanie-po-numerach?fabula=abstrakcja
+Redirect 301 /malowanie-fabula-bohaterowie /3-malowanie-po-numerach?fabula=bohaterowie
+Redirect 301 /malowanie-fabula-dla-dzieci /3-malowanie-po-numerach?fabula=dla-dzieci
+Redirect 301 /malowanie-fabula-dla-poczatkujacych /3-malowanie-po-numerach?fabula=dla-poczatkujacych
+Redirect 301 /malowanie-fabula-inne /3-malowanie-po-numerach?fabula=inne
+Redirect 301 /malowanie-fabula-kosmos /3-malowanie-po-numerach?fabula=kosmos
+Redirect 301 /malowanie-fabula-kwiaty /3-malowanie-po-numerach?fabula=kwiaty
+Redirect 301 /malowanie-fabula-martwa-natura /3-malowanie-po-numerach?fabula=martwa-natura
+Redirect 301 /malowanie-fabula-miejskie-krajobrazy /3-malowanie-po-numerach?fabula=miejskie-krajobrazy
+Redirect 301 /malowanie-fabula-natura /3-malowanie-po-numerach?fabula=natura
+Redirect 301 /malowanie-fabula-obrazy-ludzi /3-malowanie-po-numerach?fabula=obrazy-ludzi
+Redirect 301 /malowanie-fabula-pejzaz /3-malowanie-po-numerach?fabula=pejzaz
+Redirect 301 /malowanie-fabula-portret /3-malowanie-po-numerach?fabula=portret
+Redirect 301 /malowanie-fabula-religia /3-malowanie-po-numerach?fabula=religia
+Redirect 301 /malowanie-fabula-romans /3-malowanie-po-numerach?fabula=romans
+
+#WeNet 2023-01-12
+Redirect 301 /blog/category/1_artykuly /blog/category/1-artykuly
+Redirect 301 /blog/post/10_jak-zajecia-manualne-wplywaja-na-mozg /blog/post/10-jak-zajecia-manualne-wplywaja-na-mozg
+Redirect 301 /blog/post/11_u-kogo-zamowic-obraz-do-malowania-by-nie-byl-wybrakowany /blog/post/11-u-kogo-zamowic-obraz-do-malowania-by-nie-byl-wybrakowany
+Redirect 301 /blog/post/12_co-trzeba-wiedziec-na-poczatku-przygody-z-malowaniem-po-numerach /blog/post/12-co-trzeba-wiedziec-na-poczatku-przygody-z-malowaniem-po-numerach
+Redirect 301 /blog/post/13_jak-sztuka-pomaga-w-terapii-antystresowej /blog/post/13-jak-sztuka-pomaga-w-terapii-antystresowej
+Redirect 301 /blog/post/14_jakie-plyna-zalety-z-malowania-obrazow-po-numerach /blog/post/14-jakie-plyna-zalety-z-malowania-obrazow-po-numerach
+Redirect 301 /blog/post/15_jak-przygotowac-sie-do-malowania-obrazu-po-numerach /blog/post/15-jak-przygotowac-sie-do-malowania-obrazu-po-numerach
+Redirect 301 /blog/post/16_jak-powstal-pomysl-malowania-po-numerach /blog/post/16-jak-powstal-pomysl-malowania-po-numerach
+Redirect 301 /blog/post/17_dla-kogo-dedykowane-jest-malowanie-po-numerach /blog/post/17-dla-kogo-dedykowane-jest-malowanie-po-numerach
+Redirect 301 /blog/post/18_o-czym-mowia-kwiaty /blog/post/18-o-czym-mowia-kwiaty
+Redirect 301 /blog/post/19_jakie-bledy-najczesciej-popelnia-sie-podczas-malowania-po-numerach /blog/post/19-jakie-bledy-najczesciej-popelnia-sie-podczas-malowania-po-numerach
+Redirect 301 /blog/post/1_malowanie-po-numerach-wszystko-co-musisz-wiedziec /blog/post/1-malowanie-po-numerach-wszystko-co-musisz-wiedziec
+Redirect 301 /blog/post/20_jak-korzystac-z-materialow-podczas-malowania-po-numerach /blog/post/20-jak-korzystac-z-materialow-podczas-malowania-po-numerach
+Redirect 301 /blog/post/21_historia-puzzli /blog/post/21-historia-puzzli
+Redirect 301 /blog/post/22_co-warto-wiedziec-zanim-zacznie-sie-malowanie-obrazu-po-numerach /blog/post/22-co-warto-wiedziec-zanim-zacznie-sie-malowanie-obrazu-po-numerach
+Redirect 301 /blog/post/23_czym-sie-kierowac-wybierajac-obraz-do-malowania-po-numerach /blog/post/23-czym-sie-kierowac-wybierajac-obraz-do-malowania-po-numerach
+Redirect 301 /blog/post/24_do-jakich-wnetrz-pasuja-obrazy-malowane-po-numerach /blog/post/24-do-jakich-wnetrz-pasuja-obrazy-malowane-po-numerach
+Redirect 301 /blog/post/28_poznaj-rodzaje-obrazow-do-malowania-po-numerach /blog/post/28-poznaj-rodzaje-obrazow-do-malowania-po-numerach
+Redirect 301 /blog/post/2_malowanie-po-numerach-dla-kogo /blog/post/2-malowanie-po-numerach-dla-kogo
+Redirect 301 /blog/post/31_jak-malowanie-po-numerach-wplywa-na-rozwoj-dziecka /blog/post/31-jak-malowanie-po-numerach-wplywa-na-rozwoj-dziecka
+Redirect 301 /blog/post/32_jak-malowac-po-numerach /blog/post/32-jak-malowac-po-numerach
+Redirect 301 /blog/post/33_jak-mozna-zapoznac-dziecko-ze-sztuka /blog/post/33-jak-mozna-zapoznac-dziecko-ze-sztuka
+Redirect 301 /blog/post/34_jak-wymyslec-kreatywne-zabawy-dla-dzieci-i-rodzicow /blog/post/34-jak-wymyslec-kreatywne-zabawy-dla-dzieci-i-rodzicow
+Redirect 301 /blog/post/35_prawdziwa-sztuka-a-malowanie-po-numerach /blog/post/35-prawdziwa-sztuka-a-malowanie-po-numerach
+Redirect 301 /blog/post/36_jak-zachecic-seniorow-do-malowania-po-numerach /blog/post/36-jak-zachecic-seniorow-do-malowania-po-numerach
+Redirect 301 /blog/post/37_dlaczego-malowanie-po-numerach-jest-wskazane-dla-osob-starszych /blog/post/37-dlaczego-malowanie-po-numerach-jest-wskazane-dla-osob-starszych
+Redirect 301 /blog/post/38_jakie-obrazy-sa-najprostsze-do-namalowania-samemu /blog/post/38-jakie-obrazy-sa-najprostsze-do-namalowania-samemu
+Redirect 301 /blog/post/39_czy-malowanie-farbami-musi-byc-trudne-obalamy-mity /blog/post/39-czy-malowanie-farbami-musi-byc-trudne-obalamy-mity
+Redirect 301 /blog/post/3_badz-artysta-sprawdz-co-daje-malowanie /blog/post/3-badz-artysta-sprawdz-co-daje-malowanie
+Redirect 301 /blog/post/40_malowac-jak-picasso-czy-to-mozliwe /blog/post/40-malowac-jak-picasso-czy-to-mozliwe
+Redirect 301 /blog/post/4_poznaj-pomysly-na-antystresowy-relaks /blog/post/4-poznaj-pomysly-na-antystresowy-relaks
+Redirect 301 /blog/post/5_dlaczego-warto-uzywac-sztalugi-do-malowania-obrazow /blog/post/5-dlaczego-warto-uzywac-sztalugi-do-malowania-obrazow
+Redirect 301 /blog/post/6_jak-dobrac-rame-do-obrazu-malowanego-po-numerach /blog/post/6-jak-dobrac-rame-do-obrazu-malowanego-po-numerach
+Redirect 301 /blog/post/7_co-mozna-sprezentowac-milosnikowi-sztuki /blog/post/7-co-mozna-sprezentowac-milosnikowi-sztuki
+Redirect 301 /blog/post/8_po-co-lakierowac-obraz-po-numerach /blog/post/8-po-co-lakierowac-obraz-po-numerach
+Redirect 301 /blog/post/9_jaki-obraz-wybrac-dla-dziecka-do-malowanie-po-numerach /blog/post/9-jaki-obraz-wybrac-dla-dziecka-do-malowanie-po-numerach
+
+#WeNet 2023-02-10
+Redirect 301 /content/6-aeu-legal-revocation-terms /content/16-regulamin
+Redirect 301 /content/25-как-рисовать /content/36-jak-namalowac-obraz
+Redirect 301 /content/3-terms-and-conditions-of-use /content/16-regulamin
+Redirect 301 /content/9-aeu-legal-environmental-notice /content/16-regulamin
+Redirect 301 /content/8-aeu-legal-shipping-and-payment /content/18-platnosc
+Redirect 301 /content/7-aeu-legal-privacy /content/16-regulamin
+Redirect 301 /content/5-secure-payment /content/16-regulamin
+Redirect 301 /content/2-legal-notice /content/16-regulamin
+Redirect 301 /content/32-zxzx /
+Redirect 301 /content/4-about-us /content/10-o-sklepie
+Redirect 301 /content/1-delivery /content/19-dostawa
+
+## Przekierowanie segmentów językowych
+RedirectMatch 301 /pl/(.*) /$1
+RedirectMatch 301 /en/(.*) /$1
+RedirectMatch 301 /ru/(.*) /$1
