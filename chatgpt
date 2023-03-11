@@ -1,0 +1,85 @@
+<?php
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
+class ChatGPTProductDescriptionGenerator extends Module
+{
+    public function __construct()
+    {
+        $this->name = 'chatgptproductdescriptiongenerator';
+        $this->tab = 'front_office_features';
+        $this->version = '1.0.0';
+        $this->author = 'Your Name';
+        $this->need_instance = 0;
+
+        parent::__construct();
+
+        $this->displayName = $this->l('ChatGPT Product Description Generator');
+        $this->description = $this->l('Generates short and long descriptions for selected products using ChatGPT API.');
+
+        $this->confirmUninstall = $this->l('Are you sure you want to uninstall this module?');
+    }
+
+    public function install()
+    {
+        if (!parent::install()) {
+            return false;
+        }
+
+        return true;
+    }
+
+    public function uninstall()
+    {
+        if (!parent::uninstall()) {
+            return false;
+        }
+
+        return true;
+    }
+
+    public function getContent()
+    {
+        $output = null;
+
+        if (Tools::isSubmit('submit'.$this->name)) {
+            $chatGPTAPIKey = strval(Tools::getValue('CHATGPT_API_KEY'));
+            $shortDescriptionTemplate = strval(Tools::getValue('SHORT_DESCRIPTION_TEMPLATE'));
+            $longDescriptionTemplate = strval(Tools::getValue('LONG_DESCRIPTION_TEMPLATE'));
+
+            // Save settings to database
+            Configuration::updateValue('CHATGPT_API_KEY', $chatGPTAPIKey);
+            Configuration::updateValue('SHORT_DESCRIPTION_TEMPLATE', $shortDescriptionTemplate);
+            Configuration::updateValue('LONG_DESCRIPTION_TEMPLATE', $longDescriptionTemplate);
+
+            $output .= $this->displayConfirmation($this->l('Settings updated'));
+        }
+
+        return $output.$this->displayForm();
+    }
+
+    public function displayForm()
+    {
+        // Get products from database
+        $products = Product::getProducts($this->context->language->id, 0, 0, 'id_product', 'ASC', false, true);
+
+        // Generate table with products and checkboxes
+        $productTable = '<table class="table">';
+        $productTable .= '<thead><tr><th>'.$this->l('Product').'</th><th>'.$this->l('Cover image').'</th><th>'.$this->l('Generate short description').'</th><th>'.$this->l('Generate long description').'</th></tr></thead>';
+        $productTable .= '<tbody>';
+        foreach ($products as $product) {
+            $productTable .= '<tr>';
+            $productTable .= '<td>'.$product['name'].'</td>';
+            $productTable .= '<td><img src="'.$this->context->link->getImageLink($product['link_rewrite'], $product['id_image'], 'medium_default').'" alt="'.$product['name'].'" /></td>';
+            $productTable .= '<td><input type="checkbox" name="generate_short_description[]" value="'.$product['id_product'].'" /></td>';
+            $productTable .= '<td><input type="checkbox" name="generate_long_description[]" value="'.$product['id_product'].'" /></td>';
+            $productTable .= '</tr>';
+        }
+        $productTable .= '</tbody>';
+        $productTable .= '</table>';
+
+        $defaultShortDescriptionTemplate = 'This product is {product_description}.';
+        $defaultLongDescriptionTemplate = 'This product is {product_description}. It has {product_features}.';
+
+        // Get current settings
