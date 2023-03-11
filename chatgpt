@@ -61,25 +61,139 @@ class ChatGPTProductDescriptionGenerator extends Module
 
     public function displayForm()
     {
-        // Get products from database
-        $products = Product::getProducts($this->context->language->id, 0, 0, 'id_product', 'ASC', false, true);
+    // Get the API key from the configuration
+    $api_key = Configuration::get('CHATGPT_API_KEY');
 
-        // Generate table with products and checkboxes
-        $productTable = '<table class="table">';
-        $productTable .= '<thead><tr><th>'.$this->l('Product').'</th><th>'.$this->l('Cover image').'</th><th>'.$this->l('Generate short description').'</th><th>'.$this->l('Generate long description').'</th></tr></thead>';
-        $productTable .= '<tbody>';
-        foreach ($products as $product) {
-            $productTable .= '<tr>';
-            $productTable .= '<td>'.$product['name'].'</td>';
-            $productTable .= '<td><img src="'.$this->context->link->getImageLink($product['link_rewrite'], $product['id_image'], 'medium_default').'" alt="'.$product['name'].'" /></td>';
-            $productTable .= '<td><input type="checkbox" name="generate_short_description[]" value="'.$product['id_product'].'" /></td>';
-            $productTable .= '<td><input type="checkbox" name="generate_long_description[]" value="'.$product['id_product'].'" /></td>';
-            $productTable .= '</tr>';
+    // Get the short description template from the configuration
+    $short_template = Configuration::get('CHATGPT_SHORT_TEMPLATE');
+
+    // Get the long description template from the configuration
+    $long_template = Configuration::get('CHATGPT_LONG_TEMPLATE');
+
+    // Get the list of products from the database
+    $products = Product::getProducts(Context::getContext()->language->id, 0, 0, 'id_product', 'ASC', false, true);
+
+    // Build the product table
+    $table = '<table id="chatgpt-products-table" class="table">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" id="chatgpt-select-all"></th>
+                        <th>' . $this->l('Name') . '</th>
+                        <th>' . $this->l('Cover Image') . '</th>
+                    </tr>
+                </thead>
+                <tbody>';
+
+    foreach ($products as $product) {
+        $table .= '<tr>
+                    <td><input type="checkbox" name="chatgpt-products[]" value="' . $product['id_product'] . '"></td>
+                    <td>' . $product['name'] . '</td>
+                    <td><img src="' . $this->context->link->getImageLink($product['link_rewrite'], $product['id_image'], 'medium_default') . '"></td>
+                  </tr>';
+    }
+
+    $table .= '</tbody></table>';
+
+    // Render the form
+    $this->context->smarty->assign(array(
+        'api_key' => $api_key,
+        'short_template' => $short_template,
+        'long_template' => $long_template,
+        'product_table' => $table,
+        'select_all_label' => $this->l('Select All'),
+        'deselect_all_label' => $this->l('Deselect All'),
+        'generate_label' => $this->l('Generate Texts'),
+        'form_action' => $this->context->link->getAdminLink('AdminModules') . '&configure=' . $this->name . '&tab_module=' . $this->tab . '&module_name=' . $this->name . '&action=generate',
+        'token' => Tools::getAdminTokenLite('AdminModules'),
+    ));
+
+    return $this->display(__FILE__, 'views/templates/admin/configure.tpl');
+    }
+
+    public function getContent()
+    {
+    $output = null;
+
+    // If the form has been submitted, process the data
+    if (Tools::isSubmit('submitChatgptModule')) {
+        // Validate the API key
+        $api_key = Tools::getValue('chatgpt_api_key');
+
+        if (empty($api_key)) {
+            $output .= $this->displayError($this->l('API key is required.'));
+        } else {
+            Configuration::updateValue('CHATGPT_API_KEY', $api_key);
+            $output .= $this->displayConfirmation($this->l('API key updated successfully.'));
         }
-        $productTable .= '</tbody>';
-        $productTable .= '</table>';
 
-        $defaultShortDescriptionTemplate = 'This product is {product_description}.';
-        $defaultLongDescriptionTemplate = 'This product is {product_description}. It has {product_features}.';
+        // Update the short description template
+        $short_template = Tools::getValue('chatgpt_short_template');
 
-        // Get current settings
+        if (empty($short_template)) {
+            $output .= $this->displayError($this->l('Short description template is required.'));
+        } else {
+            Configuration::updateValue('CHATGPT_SHORT_TEMPLATE', $short_template);
+            $output .= $this->displayConfirmation($this->l('Short description template updated successfully.'));
+        }
+// Add fields to the form
+$fields_form = array(
+    'form' => array(
+        'legend' => array(
+            'title' => $this->l('ChatGPT Settings'),
+            'icon' => 'icon-cogs',
+        ),
+        'input' => array(
+            array(
+                'type' => 'text',
+                'label' => $this->l('ChatGPT API Key'),
+                'name' => 'chatgpt_api_key',
+                'required' => true,
+            ),
+            array(
+                'type' => 'textarea',
+                'label' => $this->l('Short Description Template'),
+                'name' => 'short_description_template',
+                'desc' => $this->l('This is the template for the short description that will be used to generate text using ChatGPT. The prompt for ChatGPT should be enclosed in double curly braces, e.g. {{product_name}} is a high-quality product.'),
+                'autoload_rte' => true,
+            ),
+            array(
+                'type' => 'textarea',
+                'label' => $this->l('Long Description Template'),
+                'name' => 'long_description_template',
+                'desc' => $this->l('This is the template for the long description that will be used to generate text using ChatGPT. The prompt for ChatGPT should be enclosed in double curly braces, e.g. {{product_name}} is a high-quality product.'),
+                'autoload_rte' => true,
+            ),
+            array(
+                'type' => 'product_list',
+                'label' => $this->l('Products'),
+                'name' => 'products',
+                'desc' => $this->l('Select the products for which you want to generate descriptions.'),
+            ),
+        ),
+        'submit' => array(
+            'title' => $this->l('Generate Descriptions'),
+            'icon' => 'icon-refresh',
+        ),
+    ),
+);
+
+// Create the form helper
+$helper = new HelperForm();
+
+// Set the form properties
+$helper->module = $this;
+$helper->name_controller = $this->name;
+$helper->token = Tools::getAdminTokenLite('AdminModules');
+$helper->currentIndex = AdminController::$currentIndex.'&configure='.$this->name;
+
+// Load the current values for the form fields
+$helper->fields_value = array(
+    'chatgpt_api_key' => Configuration::get('CHATGPT_API_KEY'),
+    'short_description_template' => Configuration::get('SHORT_DESCRIPTION_TEMPLATE'),
+    'long_description_template' => Configuration::get('LONG_DESCRIPTION_TEMPLATE'),
+    'products' => $this->getSelectedProducts(),
+);
+
+// Generate the form HTML
+$form_html = $helper->generateForm(array($fields_form));
+echo $form_html;
